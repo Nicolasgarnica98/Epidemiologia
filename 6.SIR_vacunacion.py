@@ -26,9 +26,8 @@ def SIR_func(N, Lambda, Mu, K, VE):
                 r = np.round(K * q * VE)
                 S = S - np.minimum(r, S)
                 R = R + np.minimum(r, S)
-        # if I+R > np.round(0.1*N) and down == 0:
-        #     Lambda = Lambda/2
-        #     down = 1
+        
+
         # Decidir el evento
         inf_rate = Lambda * I * (S / N)  # Infection rate S->I
         rem_rate = Mu * I  # Removal rate S->I
@@ -67,6 +66,6 @@ N = int(input('Insertar tamaño de la población: '))
 Lmda = float(input('Insertar Lambda: '))
 Mu = float(input('Insertar tasa de recuperación: '))
 k = int(input('Insertar vacunados po día: '))
-VE = float(input('Insertar fraccion de vacnados VE: '))
+VE = float(input('Insertar fraccion de vacunados VE: '))
 
 SIR_func(N, Lmda, Mu, k, VE)

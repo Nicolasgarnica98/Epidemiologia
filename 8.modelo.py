@@ -76,8 +76,10 @@ def model(N,Ro):
         rates = [t_s_i1,t_s_io,t_io_R,t_i1_H,t_H_R,t_H_ICU,t_H_D,t_ICU_D,t_ICU_R]
         totrates = np.sum(rates)
         prob_array = rates/totrates
-
+        
+        #Next event
         tnex = (-1*np.log(np.random.uniform(0.000001,1)))/totrates
+        
         
 
         print(prob_array)

@@ -16,7 +16,6 @@ for i in tqdm(range(0,sim)):
         new = np.setdiff1d(places,ocupados)
         I = new
         R = ocupados
-        print(R)
 
     x[i] = len(R)
     
